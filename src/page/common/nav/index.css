@@ -1,0 +1,109 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 20:35:27
+* @Last Modified by:   tino
+* @Last Modified time: 2018-12-28 11:22:00
+*/
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+.nav {
+    background-color: #eee;
+    height: 74px;
+    line-height: 74px;
+}
+
+/* link nav part */
+.nav .nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav .nav-list .nav-item {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 13px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.w {
+    display: block;
+    overflow: auto;
+}
+.all {
+    display: block;
+    width: 200px;
+    background-color: #DCDCDC;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    font-family: 'Thasadith', sans-serif;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    position: absolute;
+    overflow: visible;
+}
+.all .item {
+    background: #e6e6e6;
+    border-bottom: 2px solid #eaeaea; 
+    padding: 10px;
+}
+
+.all .item:hover {
+    color: #f9f9f9;
+    background: #343434;
+    cursor: pointer;
+}
+.w {
+    overflow: visible;
+}
+.store {
+    position: absolute;
+    left: 310px;
+    top: 65px;
+}
+
+.about {
+    position: absolute;
+    left: 405px;
+    top: 65px;
+}
+
+.partner {
+    position: absolute;
+    left: 512px;
+    top: 65px;
+}
+
+.media {
+    position: absolute;
+    left: 620px;
+    top: 65px;
+}
+
+.campaigns {
+    position: absolute;
+    left: 725px;
+    top: 65px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #DCDCDC;
+  position: absolute;
+  left: 50%;
+  top: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+

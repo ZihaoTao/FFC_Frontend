@@ -1,0 +1,13 @@
+{{#list}}
+    <li class="p-item">
+        <div class="p-img-con">
+            <p>id: {{id}}</p>
+            <p>userId: {{userId}}</p>
+            <p>status: {{status}}</p>
+            <p>createTime: {{createTime}}</p>
+        </div>
+    </li>   
+{{/list}}
+{{^list}}
+    <p class="err-tip"> Cannot find coupon matching this selection. </p>
+{{/list}}

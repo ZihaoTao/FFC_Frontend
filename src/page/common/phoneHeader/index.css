@@ -1,0 +1,33 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-12-28 09:38:45
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 09:46:11
+*/
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+.phoneHead-wrapper {
+    background-color: #fff;
+    width: 1118px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.phoneHead-wrapper .mail {
+    position: relative;
+    left: 400px;
+    bottom: 60px;
+}
+
+.phoneHead-wrapper .mail:hover {
+    cursor: pointer;
+}
+
+.phoneHead-wrapper .nav-bars {
+    position: absolute;
+    left: 500px;
+    bottom: 60px;
+}
+
+
+
+

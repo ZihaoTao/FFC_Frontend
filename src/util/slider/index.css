@@ -1,0 +1,18 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 14:28:19
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 08:55:48
+*/
+/* banner */
+.banner{
+    position: relative; 
+    overflow: auto; 
+}
+.banner li { 
+    list-style: none; 
+}
+.banner ul li { 
+    float: left; 
+}
+

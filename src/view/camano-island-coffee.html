@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= require('html-loader!./layout/head-common.html') %>
+        <title><%= htmlWebpackPlugin.options.title %> - fashionforconservation</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/header.html') %>
+        <%= require('html-loader!./layout/email.html') %>
+        <%= require('html-loader!./layout/nav.html') %>
+        <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ndvg8ccDC1Y?start=7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <%= require('html-loader!./layout/footer.html')%>
+    </body>
+</html>

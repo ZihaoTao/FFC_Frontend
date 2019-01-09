@@ -1,0 +1,47 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 20:54:36
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-27 20:04:47
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+.footer {
+    background-color: #eee;
+    height: 74px;
+    line-height: 74px;
+
+}
+
+/* link footer part */
+.footer .footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-list .footer-item {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 13px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+
+.icon .fa {
+    font-size: 23px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.icon .fa:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+

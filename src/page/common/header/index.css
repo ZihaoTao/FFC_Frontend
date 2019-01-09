@@ -1,0 +1,68 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 21:04:33
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2019-01-08 13:22:11
+*/
+/* header */
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+.head-wrapper {
+    background-color: #fff;
+    width: 1118px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    padding: 10px;
+}
+.subtitle {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+}
+
+img {
+    margin-top: 40px;
+    width: 115px;
+    height: 106px;
+}
+
+.mail {
+    position: relative;
+    left: 1000px;
+    bottom: 50px;
+    font-size: 23px;
+}
+
+.popup{
+    margin: 40px 40px;  
+}
+
+.mail:hover {
+    cursor: pointer;
+}
+
+.fa-times {
+    position: relative;
+    left: 95%;
+    top:20px;
+    font-size: 23px;
+    z-index: 1;
+}
+
+.fa-times:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+    .head-wrapper {
+        width: 100%;
+    }
+}
+

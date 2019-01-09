@@ -1,0 +1,92 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-12-27 17:28:53
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 11:26:55
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+.container {
+    background-color: white;
+}
+
+p {
+    text-align: center;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.story {
+    display: flex;
+    justify-content: space-around;
+}
+
+.model {
+    margin-top: 40px;
+    font-weight: 100;
+    width: 490px;
+    height: 736px;
+}
+.model2 {
+    width: 467px;
+    height: 311px;
+}
+
+.top {
+    margin: 40px 100px;
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.vogue {
+    width: 302px;
+    height: 82px;
+    margin: 40px auto;
+}
+
+.nyt {
+    width: 300px;
+    height: 44px;
+    margin: 40px auto;
+}
+
+.ted {
+    width: 300px;
+    height: 89px;
+    margin: 40px auto;
+}
+
+.disc {
+    width: 300px;
+    height: 64px;
+    margin: 40px auto;
+}
+
+.btn {
+    width: 132px;
+    height: 40px;
+    position: relative;
+    left: 40%;
+
+    font-size: 13px; 
+}
+
+.bottom {
+    font-size: 18px;
+    margin: 25px 100px;
+    font-weight: 100;
+}
+
+.london{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.Title {
+    margin: 0 0;
+    width: 217px;
+    height: 173px;
+    margin-bottom: 100px; 
+}
+

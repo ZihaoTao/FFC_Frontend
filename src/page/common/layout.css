@@ -1,0 +1,152 @@
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 17:35:28
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 11:24:28
+*/
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f9f9;
+    margin: auto auto;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    cursor: pointer;
+}
+
+
+/* Fixed width layout */
+
+.w {
+    width: 1118px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.indexW {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -90px;
+    overflow: hidden;
+}
+
+/* panel */
+.panel {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white; 
+}
+
+.panel .panel-title {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.panel .panel-body {
+    padding: 10px;
+    overflow: hidden; 
+}
+
+/* global layout sample */
+/* hidden class */
+.hide {
+    display: none;
+}
+
+/* Hyperlink style */
+.link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #999;
+}
+
+.link-text {
+    color: #999;
+    text-decoration: none;
+}
+
+/* btn */
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background-color: #343434;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-mini{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10 px;
+}
+
+/* loading */
+.loading {
+    margin: 10px auto;
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    background: url(../../image/icon/loading.jpg) no-repeat;
+    opacity: .6;
+}
+
+.test {
+    height: 1100px;
+}
+
+.all {
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

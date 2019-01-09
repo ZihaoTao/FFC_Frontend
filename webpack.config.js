@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-10-31 23:51:49
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 00:40:19
+* @Last Modified time: 2019-01-09 00:45:18
 */
 
 var webpack = require('webpack');
@@ -36,7 +36,7 @@ var config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.taozihao.xyz/FFC_Frontend/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.fashionforconservation.xyz/FFC_Frontend/dist/',
         filename: 'js/[name].js'
     },
     externals: {

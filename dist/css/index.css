@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Thasadith);@import url(https://fonts.googleapis.com/css?family=Thasadith);/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 21:04:33
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2019-01-08 13:22:11
+*/
+/* header */
+.head-wrapper {
+    background-color: #fff;
+    width: 1118px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    padding: 10px;
+}
+.subtitle {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+}
+
+img {
+    margin-top: 40px;
+    width: 115px;
+    height: 106px;
+}
+
+.mail {
+    position: relative;
+    left: 1000px;
+    bottom: 50px;
+    font-size: 23px;
+}
+
+.popup{
+    margin: 40px 40px;  
+}
+
+.mail:hover {
+    cursor: pointer;
+}
+
+.fa-times {
+    position: relative;
+    left: 95%;
+    top:20px;
+    font-size: 23px;
+    z-index: 1;
+}
+
+.fa-times:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+    .head-wrapper {
+        width: 100%;
+    }
+}
+
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 20:35:27
+* @Last Modified by:   tino
+* @Last Modified time: 2018-12-28 11:22:00
+*/
+.nav {
+    background-color: #eee;
+    height: 74px;
+    line-height: 74px;
+}
+
+/* link nav part */
+.nav .nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav .nav-list .nav-item {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 13px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.w {
+    display: block;
+    overflow: auto;
+}
+.all {
+    display: block;
+    width: 200px;
+    background-color: #DCDCDC;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    font-family: 'Thasadith', sans-serif;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    position: absolute;
+    overflow: visible;
+}
+.all .item {
+    background: #e6e6e6;
+    border-bottom: 2px solid #eaeaea; 
+    padding: 10px;
+}
+
+.all .item:hover {
+    color: #f9f9f9;
+    background: #343434;
+    cursor: pointer;
+}
+.w {
+    overflow: visible;
+}
+.store {
+    position: absolute;
+    left: 310px;
+    top: 65px;
+}
+
+.about {
+    position: absolute;
+    left: 405px;
+    top: 65px;
+}
+
+.partner {
+    position: absolute;
+    left: 512px;
+    top: 65px;
+}
+
+.media {
+    position: absolute;
+    left: 620px;
+    top: 65px;
+}
+
+.campaigns {
+    position: absolute;
+    left: 725px;
+    top: 65px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #DCDCDC;
+  position: absolute;
+  left: 50%;
+  top: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-01 12:10:00
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 09:10:15
+*/
+
+/* banner-con */
+.banner-con {
+    width: 465px;
+    height: 697px;
+    float:left;
+    background: #eee;
+    margin: 0 50px;
+}
+
+.banner-con .loading {
+    margin-top: 240px; 
+}
+
+.banner-con .banner-img {
+    width: 100%;
+    height: 697px;
+    margin: 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* @Author: Zihao Tao
+* @Date:   2018-11-06 14:28:19
+* @Last Modified by:   Zihao Tao
+* @Last Modified time: 2018-12-28 08:55:48
+*/
+/* banner */
+.banner{
+    position: relative; 
+    overflow: auto; 
+}
+.banner li { 
+    list-style: none; 
+}
+.banner ul li { 
+    float: left; 
+}
+

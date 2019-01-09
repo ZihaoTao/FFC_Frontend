@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-08 23:05:41
+* @Last Modified time: 2019-01-09 01:05:18
 */
 'use strict';
 require('./index.css');
@@ -131,7 +131,8 @@ var page = {
         // return seccess
         if(validateResult.status) {
             _user.login(loginFormData, function(res) {
-                window.location.href = _mm.getUrlParam('redirect') || './index.html';
+                $('.info').show();
+                $('.login').hide();
             }, function(errMsg) {
                 formError.show(errMsg);
             });
@@ -175,7 +176,7 @@ var page = {
         if(validateResult.status) {
             _user.register(registerFormData, function(res) {
                 $('.register').hide();
-                $('.info').show();
+                $('.login').show();
                 _coupon.addDefaultCoupon(function(res){
                     console.log("Add Default Coupon");
                 }, function(errMsg){

@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 01:05:18
+* @Last Modified time: 2019-01-09 01:12:11
 */
 'use strict';
 require('./index.css');
@@ -133,6 +133,11 @@ var page = {
             _user.login(loginFormData, function(res) {
                 $('.info').show();
                 $('.login').hide();
+                _coupon.addDefaultCoupon(function(res){
+                    console.log("Add Default Coupon");
+                }, function(errMsg){
+                    console.log("Cannot Add Default Coupon");
+                });
             }, function(errMsg) {
                 formError.show(errMsg);
             });
@@ -177,11 +182,6 @@ var page = {
             _user.register(registerFormData, function(res) {
                 $('.register').hide();
                 $('.login').show();
-                _coupon.addDefaultCoupon(function(res){
-                    console.log("Add Default Coupon");
-                }, function(errMsg){
-                    console.log("Cannot Add Default Coupon");
-                });
             }, function(errMsg) {
                 usernameError.show(errMsg);
             });

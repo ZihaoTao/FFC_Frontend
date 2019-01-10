@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 23:17:51
+* @Last Modified time: 2019-01-09 23:21:55
 */
 'use strict';
 require('./index.css');
@@ -188,6 +188,8 @@ var page = {
             _user.register(registerFormData, function(res) {
                 $('.register').hide();
                 $('.login').show();
+                $('.popup').hide();
+                $('.welcome').show();
                 _display.setCookie(function(res) {
                     console.log(res);
                 }, function(errMsg) {

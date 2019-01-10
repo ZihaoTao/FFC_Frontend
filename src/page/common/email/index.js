@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 22:41:30
+* @Last Modified time: 2019-01-09 23:17:51
 */
 'use strict';
 require('./index.css');
@@ -189,9 +189,9 @@ var page = {
                 $('.register').hide();
                 $('.login').show();
                 _display.setCookie(function(res) {
-                    console.log("Set cookie successfully.");
+                    console.log(res);
                 }, function(errMsg) {
-                    console.log("Cannot set cookie.");
+                    console.log(errMsg);
                 });
             }, function(errMsg) {
                 usernameError.show(errMsg);

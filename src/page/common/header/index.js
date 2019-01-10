@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-11-06 21:04:25
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-08 21:23:37
+* @Last Modified time: 2019-01-09 22:38:47
 */
 'use strict';
 require('./index.css');
@@ -19,12 +19,10 @@ var header = {
     onload: function() {
         // popup
         _display.popup(function(res) {
-
+                console.log("Welcome to FasionForConservation!")
             }, function(errMsg) {
-                _display.setCookie(function(res) {
-                    $('.m').show();
-                    $('.mail').hide();
-                });
+                $('.m').show();
+                $('.mail').hide();
             });
     },
     bindEvent : function(){

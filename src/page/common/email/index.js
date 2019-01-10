@@ -2,12 +2,13 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 01:12:11
+* @Last Modified time: 2019-01-09 22:41:30
 */
 'use strict';
 require('./index.css');
 var _user = require('service/user-service.js');
 var _coupon = require('service/coupon-service.js');
+var _display = require('service/display-service.js');
 var _mm = require('util/mm.js');
 
 // Error reminder of table
@@ -136,7 +137,12 @@ var page = {
                 _coupon.addDefaultCoupon(function(res){
                     console.log("Add Default Coupon");
                 }, function(errMsg){
-                    console.log("Cannot Add Default Coupon");
+                    console.log("Welcome to FasionForConservation!");
+                });
+                _display.setCookie(function(res) {
+                    console.log("Set cookie successfully.");
+                }, function(errMsg) {
+                    console.log("Cannot set cookie.");
                 });
             }, function(errMsg) {
                 formError.show(errMsg);
@@ -182,6 +188,11 @@ var page = {
             _user.register(registerFormData, function(res) {
                 $('.register').hide();
                 $('.login').show();
+                _display.setCookie(function(res) {
+                    console.log("Set cookie successfully.");
+                }, function(errMsg) {
+                    console.log("Cannot set cookie.");
+                });
             }, function(errMsg) {
                 usernameError.show(errMsg);
             });

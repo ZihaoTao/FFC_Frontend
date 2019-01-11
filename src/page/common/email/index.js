@@ -2,13 +2,14 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-09 23:21:55
+* @Last Modified time: 2019-01-11 00:13:03
 */
 'use strict';
 require('./index.css');
 var _user = require('service/user-service.js');
 var _coupon = require('service/coupon-service.js');
 var _display = require('service/display-service.js');
+var _email = require('service/email-service.js');
 var _mm = require('util/mm.js');
 
 // Error reminder of table
@@ -50,12 +51,28 @@ var passwordConfirmError = {
 
 // logic of page
 var page = {
+    data: {
+        username: '',
+        question: '',
+        answer: '',
+        token: ''
+    },
     init: function() {
+        this.onload();
         this.bindEvent();
+    },
+    onload: function(){
+        this.loadStepUsername();
     },
     bindEvent: function() {
         var _this = this;
+
 // login
+        $(".forget-link").click(function() {
+            $(".reset").show();
+            $(".login").hide();
+            formError.hide();
+        });
         // click log in
         $('#login-submit').click(function() {
             _this.loginSubmit();
@@ -67,6 +84,13 @@ var page = {
                  _this.loginSubmit();
             }
         });
+// reset
+        $(".return-login").click(function() {
+            $(".reset").hide();
+            $(".login").show();
+            formError.hide();
+        });
+
 
 // register
         // verify username
@@ -112,14 +136,75 @@ var page = {
         // click sign up
         $('#register-submit').click(function() {
             _this.registerSubmit();
+            formError.hide();
         });
         // if click enter, submit
         $('.user-content').keyup(function(e) {
             // 13 is enter's keyCode
             if(e.keyCode === 13) {
                  _this.registerSubmit();
+                 formError.hide();
             }
         });
+        // click after username input
+        $('#submit-username').click(function() {
+            var username = $.trim($('#username').val());
+            // username exists
+            if(username) {
+                _user.getQuestion(username, function(res) {
+                    _this.data.username = username;
+                    _this.data.question = res;
+                    _this.loadStepQuestion();
+                }, function(errMsg) {
+                    formError.show(errMsg);
+                });
+                // username does not exist
+            } else {
+                formError.show('Please input user name');
+            }
+        });
+        // click after scurity quesiton input
+        $('#submit-question').click(function() {
+            var answer = $.trim($('#reset-answer').val());
+            if(answer) {
+                _user.checkAnswer({
+                    username: _this.data.username,
+                    question: _this.data.question,
+                    answer: answer
+                }, function(res) {
+                    _this.data.answer = answer;
+                    _this.data.token = res;
+                    _this.loadStepPassword();
+                }, function(errMsg) {
+                    formError.show(errMsg);
+                });
+                // username does not exist
+            } else {
+                formError.show('Please input the answer');
+            }
+        });
+        $('#submit-password').click(function() {
+            var password = $.trim($('#reset-password').val());
+            var confirmUsername = $.trim($('#username').val());
+            if(password && password.length >= 6) {
+                _user.resetPassword({
+                    username: _this.data.username,
+                    passwordNew: password,
+                    forgetToken: _this.data.token
+                }, function(res) {
+                    alert("You successfully changed your password!");
+                    $(".reset").hide();
+                    $(".login").show();
+                    _email.confirm(confirmUsername);
+                    formError.hide();
+                }, function(errMsg) {
+                    formError.show(errMsg);
+                });
+            } else {
+                formError.show('Please input new password, your password must contain more than 6 characters');
+            }
+        });
+
     },
     // submit table 
     loginSubmit: function() {
@@ -181,11 +266,17 @@ var page = {
             question: $.trim($('#question').val()),
             answer: $.trim($('#answer').val())
         },
+        emailConfirmation = $.trim($('#register-username').val()),
         // result of table validation
         validateResult = this.registerFormValidate(registerFormData);
         // return seccess
         if(validateResult.status) {
             _user.register(registerFormData, function(res) {
+                _email.sendConfirmation(emailConfirmation, function(res) {
+                    console.log(res);
+                }, function(errMsg) {
+                    console.log(errMsg);
+                })
                 $('.register').hide();
                 $('.login').show();
                 $('.popup').hide();
@@ -244,6 +335,26 @@ var page = {
         result.status = true;
         result.msg = 'Verified';
         return result;
+    },
+    // load the first step
+    loadStepUsername: function() {
+        $('.step-username').show();
+    },
+    // load the second step
+    loadStepQuestion: function() {
+        // clean error reminder
+        formError.hide();
+        // clean username input
+        $('.step-username').hide()
+        // show question input
+        .siblings('.step-question')
+        // show question
+        .show().find('.question').text(this.data.question);
+    },
+    // load the third step
+    loadStepPassword: function() {
+        formError.hide();
+        $('.step-question').hide().siblings('.step-password').show();
     }
 };
 

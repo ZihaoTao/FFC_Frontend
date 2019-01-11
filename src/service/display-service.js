@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 13:28:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-08 20:24:11
+* @Last Modified time: 2019-01-10 22:16:38
 */
 'use strict';
 
@@ -25,6 +25,6 @@ var _display = {
             success : resolve,
             error   : reject
         });
-    },
+    }
 }
 module.exports = _display;

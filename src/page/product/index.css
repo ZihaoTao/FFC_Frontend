@@ -2,23 +2,54 @@
 * @Author: Zihao Tao
 * @Date:   2018-11-14 17:39:57
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-16 21:55:56
+* @Last Modified time: 2019-01-17 12:24:03
 */
 
 /* sort button */
+
+.productList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.productList .left {
+    width: 8%;
+    font-size: 15px;
+}
+
+.productList .filter {
+    padding-bottom: 15px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+.productList .filter:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+.productList .active {
+    color: #999;
+}
+
+.productList .right {
+    width: 100%;
+    display: block;
+}
+
 .sort-con {
-    overflow: auto;
+    overflow: hidden;
+    margin-top: 15px; 
 }
 
 .sort-con .sort-item {
-    float: left;
+    float: right;
     display: inline-block;
     position: relative;
     padding: 0 8px;
     height: 24px;
     line-height: 24px;
     border: 1px solid #ccc;
-    margin-right: -1px;
+    font-family: 'Thasadith', sans-serif;
     background-color: #fff;
     color: #333;
     cursor: pointer;
@@ -47,32 +78,39 @@
 /* list con */
 .p-list-con {
     margin-top: 15px;
+    margin-bottom: 15px; 
     margin-right: -20px;
     overflow: hidden;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 16px;
+}
+
+.p-color {
+    text-align: left;
 }
 
 .p-list-con .p-item {
     position: relative;
-    width: 180px;
+    width: 31%;
     float:left; 
-    padding: 10px;
-    margin: 0 20px 20px 0;
+    margin: 40px 20px 20px 0;
     background-color: #fff;
 }
 
 .p-list-con .p-item .p-img-con{
-    width: 180px;
-    height: 200px; 
+    width: 100%; 
 }
 
 .p-list-con .p-item .p-img-con .p-img {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
 .p-list-con .p-item .p-price-con {
     height: 30px;
     line-height: 30px;
+    margin-left: 15px;
 }
 
 .p-list-con .p-item .p-price-con .p-price{
@@ -82,6 +120,7 @@
 
 .p-list-con .p-item .p-name-con {
     height: 40px;
+    margin-left: 15px;
     overflow: hidden;
 }
 

@@ -1,0 +1,52 @@
+<div class="intro-wrap">
+  <div class="p-img-con">
+    <div class="main-img-con">
+      <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}" />
+    </div>
+    <ul class="p-img-list">
+      {{#subImages}}
+      <li class="p-img-item">
+        <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
+      </li>
+      {{/subImages}}
+      <li class="p-img-item">
+        <img class="p-img" src="{{imageHost}}{{sku}}" alt="{{name}}" />
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="p-info-con">
+      <hi class="p-name">{{name}}</hi>
+      <p class="p-subtitle">{{subtitle}}</p>
+      <div class="detail-con">
+        {{{detail}}}
+      </div>
+      <ul class="p-info-list">
+        <li class="p-color">Color: {{color}}</li>
+        <li class="p-fw">From Where: {{fromWhere}}</li>
+        <li class="p-hm">How Made: {{howMade}}</li>
+        <li class="p-sr">Size Range: {{sizeRange}}</li>
+        <li class="p-goal">Goal: {{goal}}</li>
+        <li class="p-cause">Cause: {{cause}}</li>
+        <li class="p-status">Status: {{status}}</li>
+      </ul>
+      <div class="p-info-item p-price-con">
+        <span class="label">Price:</span>
+        <span class="information">${{price}}</span>
+      </div>
+      <div class="p-info-item">
+        <span class="label">Stock:</span>
+        <span class="information">{{stock}}</span>
+      </div>
+      <div class="p-info-item p-count-con">
+        <span class="label">Quantity:</span>
+        <input class="p-count" value="1" readonly="" />
+        <span class="p-count-btn plus">+</span>
+        <span class="p-count-btn minus">-</span>
+      </div>
+      <div class="info-item">
+        <a class="btn cart-add">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>

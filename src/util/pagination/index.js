@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-11-14 21:24:53
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2018-11-14 22:56:45
+* @Last Modified time: 2019-01-17 00:26:52
 */
 
 'use strict';
@@ -57,7 +57,7 @@ Pagination.prototype.getPaginationHtml = function(){
             ? option.pageNum + option.pageRange : option.pages;
     // last page
     pageArray.push({
-        name: 'Last Page',
+        name: '<<',
         value: this.option.prePage,
         disabled: !this.option.hasPreviousPage
     });
@@ -70,7 +70,7 @@ Pagination.prototype.getPaginationHtml = function(){
     };
     // next page
     pageArray.push({
-        name: 'Next Page',
+        name: '>>',
         value: this.option.nextPage,
         disabled: !this.option.hasNextPage
     });

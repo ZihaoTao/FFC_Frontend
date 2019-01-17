@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-10-31 23:51:49
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-16 21:53:39
+* @Last Modified time: 2019-01-17 01:08:11
 */
 
 var webpack = require('webpack');
@@ -33,7 +33,8 @@ var config = {
         'email': ['./src/page/common/email/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'list': ['./src/page/list/index.js'],
-        'product': ['./src/page/product/index.js']
+        'product': ['./src/page/product/index.js'],
+        'detail': ['./src/page/detail/index.js']
     },
     output: {
         path: __dirname + '/dist/',
@@ -79,7 +80,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('camano-island-coffee', 'Camano Island Coffee')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', 'Register')),
         new HtmlWebpackPlugin(getHtmlConfig('list', 'Coupon List')),
-        new HtmlWebpackPlugin(getHtmlConfig('product', 'Product List'))
+        new HtmlWebpackPlugin(getHtmlConfig('product', 'Product List')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail', 'Product Detail'))
     ]
 };
 

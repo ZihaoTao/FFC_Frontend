@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-11-14 17:44:16
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2018-11-17 21:03:42
+* @Last Modified time: 2019-01-17 12:38:04
 */
 
 'use strict';
@@ -13,6 +13,14 @@ var _product = {
     getProductList : function(listParam, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/product/list.do'),
+            data    : listParam,
+            success : resolve,
+            error   : reject
+        });
+    },
+    getAllProductList : function(listParam, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/product/all.do'),
             data    : listParam,
             success : resolve,
             error   : reject

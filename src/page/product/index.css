@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2018-11-14 17:39:57
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-17 12:24:03
+* @Last Modified time: 2019-01-17 13:18:12
 */
 
 /* sort button */
@@ -92,6 +92,7 @@
 .p-list-con .p-item {
     position: relative;
     width: 31%;
+    height: 500px;
     float:left; 
     margin: 40px 20px 20px 0;
     background-color: #fff;
@@ -119,7 +120,7 @@
 }
 
 .p-list-con .p-item .p-name-con {
-    height: 40px;
+    height: 50px;
     margin-left: 15px;
     overflow: hidden;
 }

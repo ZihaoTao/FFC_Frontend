@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-10 22:13:51
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-10 23:48:28
+* @Last Modified time: 2019-01-16 21:44:44
 */
 
 'use strict';
@@ -14,7 +14,8 @@ var _email = {
         _mm.request({
             url     : _mm.getServerUrl('/api/sendEmail.do'),
             data    : {
-                username: data
+                username: data,
+                emailType: 1
             },
             method  : 'POST',
             success : resolve,
@@ -23,9 +24,10 @@ var _email = {
     },
     confirm : function(data, resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/api/confirm.do'),
+            url     : _mm.getServerUrl('/api/sendEmail.do'),
             data    : {
-                username: data
+                username: data,
+                emailType: 1
             },
             method  : 'POST',
             success : resolve,

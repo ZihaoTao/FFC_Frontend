@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-08 12:48:00
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-11 00:13:03
+* @Last Modified time: 2019-01-17 15:03:38
 */
 'use strict';
 require('./index.css');
@@ -136,7 +136,6 @@ var page = {
         // click sign up
         $('#register-submit').click(function() {
             _this.registerSubmit();
-            formError.hide();
         });
         // if click enter, submit
         $('.user-content').keyup(function(e) {

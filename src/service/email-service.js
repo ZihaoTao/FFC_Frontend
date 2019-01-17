@@ -2,7 +2,7 @@
 * @Author: Zihao Tao
 * @Date:   2019-01-10 22:13:51
 * @Last Modified by:   Zihao Tao
-* @Last Modified time: 2019-01-16 21:44:44
+* @Last Modified time: 2019-01-17 12:50:55
 */
 
 'use strict';
@@ -15,7 +15,7 @@ var _email = {
             url     : _mm.getServerUrl('/api/sendEmail.do'),
             data    : {
                 username: data,
-                emailType: 1
+                emailType: 0
             },
             method  : 'POST',
             success : resolve,
